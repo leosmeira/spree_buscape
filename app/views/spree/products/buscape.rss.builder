@@ -28,7 +28,7 @@ xml.loja do
         end
         
         # Parcelamento
-        unless SpreeBuscape::Config[:numero_de_parcelas].blank?
+        if SpreeBuscape::Config[:numero_de_parcelas] && SpreeBuscape::Config[:numero_de_parcelas] > 0
           xml.parcelamento "#{SpreeBuscape::Config[:numero_de_parcelas]}x de #{number_to_currency product.price / SpreeBuscape::Config[:numero_de_parcelas].to_i}"
         end
         
