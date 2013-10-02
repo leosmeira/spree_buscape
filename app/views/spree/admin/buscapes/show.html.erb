@@ -1,0 +1,16 @@
+<%= render :partial => '/spree/admin/shared/configuration_menu' %>
+
+<h1><%= t("buscape_settings") %></h1>
+
+<table>
+  <tr>
+    <th scope="row"><%= t("buscape_parcelas") %>:</th>
+    <td><%= SpreeBuscape::Config[:numero_de_parcelas] %></td>
+  </tr>	  
+  <tr>
+    <th scope="row"><%= t("buscape_taxonomy") %>:</th>
+    <td><%= SpreeBuscape::Config[:category_taxonomy_id] ? Spree::Taxonomy.find(SpreeBuscape::Config[:category_taxonomy_id]).name : "N/A" %></td>
+  </tr>
+</table>
+
+<p><%= link_to_with_icon 'edit', t("edit"), edit_admin_buscapes_path, :id => 'admin_buscapes_link' %></p>

@@ -1,0 +1,20 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<h1><%= t('edit_buscape_settings') %></h1>
+
+<%= form_tag(admin_buscapes_path, :method => :put) do %>
+  <p>
+    <label><%= t('buscape_parcelas') %></label>
+    <%= text_field_tag('preferences[numero_de_parcelas]', SpreeBuscape::Config[:numero_de_parcelas])%>
+  </p>	  
+  <p>
+    <label><%= t('buscape_taxonomy') %></label>
+    <%= select_tag('preferences[category_taxonomy_id]', options_from_collection_for_select(Spree::Taxonomy.all, "id", "name", SpreeBuscape::Config[:category_taxonomy_id]), :include_blank => true) %>
+  </p>
+
+
+  <p class="form-buttons">
+    <%= button t('update') %>
+    <%= t("or") %> <%= link_to t("cancel"), admin_buscapes_url %>
+  </p>
+<% end %>

@@ -1,0 +1,9 @@
+---
+pt-BR:
+  edit_buscape_settings: "Editar as configurações do Buscapé"
+  production_domain: "Domínio / Url"
+  buscape: "Buscapé"
+  buscape_description: "Fornece uma transmissão ao vivo de produtos ativos para o Buscapé"
+  buscape_taxonomy: "Taxonomia utilizada para gerar as categorias dos produtos"
+  buscape_settings: "Configurações do Buscapé"
+  buscape_parcelas: "Número de parcelas"

@@ -1,0 +1,9 @@
+---
+en:
+  edit_buscape_settings: "Edit Buscapé settings"
+  production_domain: "Production domain/url"
+  buscape: "Buscapé"
+  buscape_description: "Provides a live feed of active products for Buscapé"
+  buscape_taxonomy: Taxonomy used to generate product category
+  buscape_settings: "Buscapé Settings"
+  buscape_parcelas: "number of plots"
