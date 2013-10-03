@@ -12,7 +12,7 @@ xml.loja do
         if product.description
           xml.detalhes CGI.escapeHTML(product.description.strip_html_tags)
         end
-        xml.link_prod Spree::Config[:site_url] + 'produtos/' + product.permalink
+        xml.link_prod "http://" + Spree::Config[:site_url].gsub(/http:|https:|\//,"") + '/produtos/' + product.permalink
         xml.preco number_to_currency product.price        
         xml.disponibilidade product.count_on_hand.to_s
          
@@ -37,7 +37,7 @@ xml.loja do
           xml.categoria product.buscape_category
         end
         
-        xml.imagem Spree::Config[:site_url] + product.images.first.attachment.url(:product) unless product.images.empty?
+        xml.imagem "http://" + Spree::Config[:site_url].gsub(/http:|https:|\//,"") + product.images.first.attachment.url(:product) unless product.images.empty?
       end
     end
   end
