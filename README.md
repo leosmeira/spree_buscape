@@ -1,7 +1,7 @@
 spree_buscape
 =============
 
-Providencia um feed de produtos para o buscapé. This is a very basic extension so feel free to help improve it!
+Providencia um feed de produtos para o buscapé.
 
 Para acessar o feed de produtos:
 
@@ -9,14 +9,12 @@ Para acessar o feed de produtos:
 
 Instalação
 ------------
-
-To start with you'll need a Google Merchant account. Then:
   
     gem "spree_buscape", :github => 'leosmeira/spree_buscape.git'
     
     bundle install
 
     
-To configure the feed title, description and site URL go to the Google Merchant settings page in Admin -> Configuration
+Para configurar, acesse a página do Buscapé em: Administrativo -> Configurações
 
 Copyright (c) 2013 leosmeira, BSD License
